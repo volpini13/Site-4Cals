@@ -1,0 +1,571 @@
+/* Importa a fonte Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* Reset básico e configurações gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth; /* Rolagem suave */
+  font-family: 'Poppins', Arial, sans-serif; /* Fonte Poppins aplicada */
+}
+
+html {
+  scroll-behavior: smooth; /* Garante rolagem suave ao clicar nas ancoras */
+}
+
+body {
+  line-height: 1.4; /* Ajusta o espaçamento entre linhas */
+}
+
+/* Cabeçalho fixo com logo e menu */
+
+
+#header img {
+  width: 60px;
+  margin-right: 10px; /* Espaço entre a imagem e o texto */
+}
+
+#header .bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+#header {
+  background: #01000a;
+  color: white;
+  display: flex;
+  justify-content: space-between; /* Garantir que os elementos fiquem nas extremidades */
+  align-items: center;
+  padding: 0.8rem 1.5rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+
+}
+
+#header .logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-right: auto; /* Faz com que o logo se alinhe à esquerda */
+}
+
+#header nav {
+  display: flex;
+  justify-content: flex-end; /* Alinha os links à direita */
+}
+
+#header nav a {
+  color: white;
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem; /* Aumentando o tamanho da fonte dos links */
+}
+
+
+
+/* Estilo base das seções */
+.section {
+  padding: 120px 90px; /* Diminuído o padding para reduzir o espaçamento vertical */
+  min-height: auto;   /* Alterado para 'auto' para evitar altura fixa */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Seções azul e branca */
+.azul {
+  background-color: #89c4f4;
+  color: #000;
+}
+
+.branca {
+  background-color: #fff;
+  color: #000;
+}
+
+#servicos h2{
+  color: #ffffff;
+}
+
+#servicos {
+  background: url('/img/background3.jpg') no-repeat center center/cover;
+  position: relative;
+  text-align: center;
+  color: #ffffff; 
+}
+
+#contato h2{
+  color: #ffffff;
+}
+
+#contato {
+  background: url('/img/background3.jpg') no-repeat center center/cover;
+  position: relative;
+  text-align: center;
+  color: #ffffff; 
+}
+
+#clientes{
+  background: url('/img/background3.jpg') no-repeat center center/cover;
+  position: relative;
+  text-align: center;
+  color: #ffffff; 
+}
+
+#clientes h2{
+  color: #ffffff;
+}
+
+#clientes h3{
+  padding-left: 20px; /* Adiciona um espaço à esquerda do texto */
+}
+
+#clientes p {
+  padding-left: 20px; /* Adiciona um espaço à esquerda do texto */
+}
+
+/* Seção Home com imagem de fundo */
+#home {
+  background: url('/img/background3.jpg') no-repeat center center/cover;
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size: 2rem; /* Tamanho fixo do texto */
+  margin-bottom: 1rem;
+  text-align: center; /* Garante que o texto fique centralizado */
+  padding: 0; /* Remover qualquer padding extra */
+  height: 600px; /* Define uma altura fixa para o cabeçalho */
+  line-height: 60px; /* Alinha o texto verticalmente no centro da altura definida */
+  overflow: hidden; /* Garante que nada ultrapasse a altura definida */
+}
+
+#home .home-content {
+  position: relative;
+  z-index: 2;
+}
+
+#home .bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+#home h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Botões da home */
+.botoes a {
+  margin: 0 0.8rem;
+  background-color: white;
+  color: #4d8ec3;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Seção Sobre Nós */
+.sobre-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sobre-container .textos {
+  flex: 1;
+  padding: 15px;
+}
+
+.sobre-container img {
+  max-width: 350px;        /* Aumenta o tamanho */
+  margin-left: 30px;       /* Empurra um pouco para a direita */
+  align-self: center;      /* Centraliza verticalmente */
+}
+
+/* Cards de uso geral */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+/* Card padrão e da equipe */
+.card,
+.card-equipe {
+  background-color: white;
+  padding: 50px; /* Aumenta o padding */
+  border-radius: 12px; /* Aumenta o arredondamento */
+  width: 250px; /* Aumenta a largura */
+  height: 280px; /* Define uma altura fixa para os cards */
+  text-align: center;
+  box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.1); /* Sombra mais suave e maior */
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Efeito de aumento nos cards da equipe */
+.card-equipe:hover {
+  transform: scale(1.1); /* Leve aumento ao passar o mouse */
+}
+
+/* Imagem nos cards da equipe */
+.card-equipe img {
+  width: 100px; /* Aumenta o tamanho da imagem */
+  height: 100px; /* Aumenta o tamanho da imagem */
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 12px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card-equipe:hover img {
+  transform: scale(1.1); /* Efeito de aumento na imagem */
+}
+
+/* Nome e descrição da equipe */
+.card-equipe h3 {
+  font-size: 1.4rem; /* Aumenta o tamanho do título */
+  color: #333;
+  margin-top: 20px; /* Ajuste no espaçamento */
+  font-weight: bold;
+}
+
+.card-equipe p {
+  font-size: 1.3rem; /* Aumenta o tamanho da descrição */
+  color: #777;
+  margin-top: 12px; /* Ajuste no espaçamento */
+}
+
+/* Container da seção Clientes */
+.clientes-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Slider simples de logos */
+.slider {
+  display: flex;
+  gap: 15px;
+  animation: slide 8s infinite linear;
+}
+
+.slider img {
+  width: 80px;
+  height: auto;
+}
+
+/* Animação do slider */
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Texto descritivo dos clientes */
+.descricao {
+  max-width: 350px;
+  text-align: left;
+  color: #fff;
+  margin-top: 0.8rem;
+}
+
+/* Seção de Contato */
+.contato-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 900px;
+}
+
+.info p {
+  margin-bottom: 0.8rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  flex: 1;
+  min-width: 270px;
+}
+
+.form input,
+.form textarea {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+}
+
+.form button {
+  background-color: #4d8ec3;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+/* Rodapé */
+footer {
+  background-color: #01000a;
+  color: white;
+  text-align: center;
+  padding: 0.8rem;
+  font-size: 0.8rem;
+}
+
+/* Responsividade geral */
+@media (max-width: 768px) {
+  .sobre-container,
+  .clientes-container,
+  .contato-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #header nav a {
+    margin-left: 0.5rem;
+  }
+
+  .slider {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    animation: none;
+  }
+}
+
+/* Slider com setas personalizado */
+.clientes-slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  max-width: 350px;
+  width: 100%;
+  overflow: hidden;
+}
+
+#clientes .clientes-slider-container {
+  display: flex;
+  justify-content: center;  /* Centraliza as imagens */
+  align-items: center;      /* Alinha as imagens verticalmente */
+}
+
+#clientes .clientes-slider-container img {
+  width: 100%;        /* Aumenta a largura para preencher o container */
+  max-width: 900px;   /* Aumenta o tamanho máximo da imagem */
+  height: auto;       /* Mantém a proporção da imagem */
+}
+
+.slider-unico {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: auto;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide.ativo {
+  display: block;
+}
+
+.seta {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: none;
+  font-size: 1.8rem;
+  padding: 0 8px;
+  cursor: pointer;
+  z-index: 10;
+  user-select: none;
+}
+
+.seta:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Tamanho das imagens da ODS */
+#ods .card img {
+  max-width: 100%;
+  height: auto;
+  max-height: 180px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Seção Clientes com carrossel + texto */
+.clientes-conteudo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5rem;
+}
+
+.clientes-slider-container {
+  position: relative;
+  width: 250px;
+  height: 180px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-unico {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slider-unico .slide {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.slider-unico .slide.ativo {
+  opacity: 1;
+}
+
+.seta {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Texto da descrição na seção clientes */
+.descricao {
+  max-width: 350px;
+  text-align: left;
+  color: #fff;
+  margin-top: 0.8rem;
+}
+
+/* Cartões da seção Serviços */
+#servicos .cards {
+  display: flex;
+  gap: 1.8rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+#servicos .card {
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 240px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  color: #333;
+  transition: transform 0.3s ease;
+  font-size: 1rem; /* Aumenta o tamanho do texto */
+  line-height: 1.5;  /* Melhora a legibilidade */
+}
+
+#servicos .card:hover {
+  transform: scale(1.05);
+}
+
+/* Ícones dos serviços */
+.icone-servico {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 0.8rem;
+}
+
+/* Reduz o tamanho do campo fale conosco */
+#contato.section {
+  min-height: 50vh;
+  padding: 40px 15px;
+}
+
+/* Ícones dos serviços */
+.icone-servico {
+  font-size: 40px;
+  color: #89c4f4;
+  margin-bottom: 12px;
+}
+
+/* Aumentando os h2 */
+h2 {
+  font-size: 2.5rem; /* Aumenta o tamanho da fonte */
+  margin-bottom: 1rem; /* Ajuste no espaçamento inferior */
+  color: #333; /* Cor para manter a consistência */
+  font-weight: bold; /* Deixa o título mais destacado */
+}
+
+.card-ods {
+  background-color: white;
+  padding: 50px; /* mesmo padding do .card-equipe */
+  border-radius: 12px; /* mesmo border-radius */
+  width: 250px; /* mesma largura */
+  height: 300px; /* mesma altura */
+  text-align: center;
+  box-shadow: 0px 0px 8px 8px rgba(0, 0, 0, 0.1); /* mesma sombra */
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 1em;
+  line-height: 1;       /* aumenta a altura da linha */
+}
+
+.card-ods:hover {
+  transform: scale(1.1); /* mesmo efeito de aumento no hover */
+}
+
+.card-ods img {
+  width: 150px; /* Tamanho ajustado */
+  height: 150px;
+  margin-bottom: 10px; /* Reduz o espaço abaixo */
+  margin-top: -20px; /* Move um pouco para cima */
+  object-fit: cover;
+  display: block; /* Para permitir o centramento */
+  margin-left: auto; /* Alinha à esquerda */
+  margin-right: auto; /* Alinha à direita */
+}
